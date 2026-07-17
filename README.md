@@ -1,95 +1,163 @@
-```markdown
 # 🌱 Spring Fundamentals
 
-> A hands-on learning journey through core Spring Framework concepts — from XML-based configuration to annotation-based and Java-based configuration, and eventually Spring MVC/Boot.
+<p align="center">
 
-Each folder is a self-contained practice project built to **actively test and understand** Spring's Dependency Injection (DI) and IoC container behavior — not just read theory.
+<img src="https://img.shields.io/badge/Java-17-orange?style=for-the-badge">
+<img src="https://img.shields.io/badge/Spring-Core-brightgreen?style=for-the-badge">
+<img src="https://img.shields.io/badge/Maven-Build-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/Status-Learning-success?style=for-the-badge">
+
+</p>
+
+<p align="center">
+A practical Spring Framework repository built to understand <b>Dependency Injection</b>, <b>IoC</b>, Bean Lifecycle, Scopes, Autowiring and different configuration styles through real working examples.
+</p>
 
 ---
 
-## 📂 Repository Structure
+# 📖 About this Repository
 
-```
+Instead of learning Spring only through theory, this repository focuses on **building small projects** that demonstrate each concept practically.
+
+Every module covers one configuration style while using the same **Computer Assembly System**, making it easy to compare how Spring works under different approaches.
+
+---
+
+# 📂 Repository Structure
+
+```text
 spring-fundamentals/
-├── xml-config/           # XML-based configuration practice
-├── annotation-config/    # Annotation-based configuration (coming soon)
-├── java-config/          # Java-based @Configuration practice (coming soon)
+│
+├── xml-config/
+├── annotation-config/
+├── java-config/
 └── README.md
 ```
 
 ---
 
-## 🧩 xml-config/ — Computer Assembly System
+# 🚀 Modules
 
-A small "Computer Assembly" project designed to exercise nearly **every core XML configuration concept** in one place.
+## 📄 XML Configuration
 
-### ✅ Concepts Covered
+✔ Constructor Injection
 
-| Concept | Demonstrated Via |
-|---|---|
-| Interface-based bean design | `Ram`, `Processor`, `Storage` interfaces |
-| Setter Injection | `<property>` |
-| Constructor Injection | `<constructor-arg>` |
-| Inner Beans | Anonymous `Storage` bean nested inside `Computer` |
-| Autowiring (`byName`, `byType`) | Resolving dependencies without explicit `ref` |
-| Primary Bean | `primary="true"` to resolve ambiguity |
-| Lazy Initialization | `lazy-init="true"` on Storage beans |
-| Bean Scopes | `singleton` vs `prototype` comparison |
-| Lifecycle Hooks | `init-method` / `destroy-method` |
-| Collections | `<list>` for ports |
-| `getBean()` variants | By id, by id+type, by type alone |
-| Exception Handling | `NoUniqueBeanDefinitionException` and its fixes |
+✔ Setter Injection
 
-### 🗂️ Project Structure
+✔ Inner Beans
 
-```
-org.amit/
-├── ram/          → Ram (interface), DDR3, DDR4
-├── processor/    → Processor (interface), Intel, Amd
-├── storage/      → Storage (interface), SSD, HDD
-├── Computer.java
-└── Main.java
-beans.xml
-```
+✔ Autowiring
 
-### 🔍 What Main.java Demonstrates
+✔ Primary Bean
 
-- Fetching a bean by **type** where multiple candidates exist, resolved via `primary`
-- Comparing object references (`==`) to observe **singleton vs prototype** scope
-- Observing **eager vs lazy** bean creation via console output timing
-- Confirming `init-method` runs at startup and `destroy-method` runs on `context.close()`
+✔ Lazy Initialization
 
-### ▶️ How to Run
+✔ Bean Scope
 
-```
-cd xml-config
-mvn compile exec:java -Dexec.mainClass="org.amit.Main"
-```
+✔ Bean Lifecycle
 
-*(or run Main.java directly from your IDE)*
+✔ Collection Injection
+
+✔ getBean()
+
+✔ Exception Handling
 
 ---
 
-## 🔜 annotation-config/ (coming soon)
+## 🏷 Annotation Configuration
 
-Will reproduce the same Computer Assembly concepts using `@Component`, `@Autowired`, `@Qualifier`, `@Primary`, `@Lazy`, `@Scope`, `@PostConstruct`, `@PreDestroy` — for direct comparison against the XML approach above.
+🚧 Coming Soon
 
-## 🔜 java-config/ (coming soon)
+Topics
 
-Will reproduce the same concepts using `@Configuration` and `@Bean` methods, loaded via `AnnotationConfigApplicationContext`.
+- @Component
+- @Autowired
+- @Qualifier
+- @Primary
+- @Scope
+- @Lazy
+- @PostConstruct
+- @PreDestroy
 
 ---
 
-## 💡 Why This Repo Exists
+## ☕ Java Configuration
 
-Spring's DI concepts — autowiring, bean scopes, lifecycle hooks — are easy to *read about* but easy to *misunderstand* without running them. This repo is a working reference I can revisit anytime to recall exactly **how** a concept behaves, not just what it's called.
+🚧 Coming Soon
+
+Topics
+
+- @Configuration
+- @Bean
+- AnnotationConfigApplicationContext
 
 ---
 
-## 🛠️ Tech Stack
+# 📚 Concepts Covered
+
+| Spring Core | Status |
+|-------------|--------|
+| IoC | ✅ |
+| Dependency Injection | ✅ |
+| XML Configuration | ✅ |
+| Bean Scope | ✅ |
+| Bean Lifecycle | ✅ |
+| Constructor Injection | ✅ |
+| Setter Injection | ✅ |
+| Annotation Configuration | 🚧 |
+| Java Configuration | 🚧 |
+| Spring Boot | 🔜 |
+
+---
+
+# 🛠 Tech Stack
 
 - Java
-- Spring Framework (Core / Context)
+- Spring Framework
 - Maven
-```
+- IntelliJ IDEA
 
+---
+
+# 🎯 Why this Repository?
+
+Many Spring tutorials explain **what** a feature is.
+
+This repository explains **how it actually behaves** by running code.
+
+You'll find examples that let you observe:
+
+- Bean creation
+- Singleton vs Prototype
+- Lazy Initialization
+- Autowiring
+- Bean Lifecycle
+- Dependency Injection
+- XML vs Annotation vs Java Configuration
+
+instead of simply reading definitions.
+
+---
+
+# 📈 Roadmap
+
+- ✅ Spring Core
+- 🚧 Annotation Configuration
+- 🚧 Java Configuration
+- 🔜 Spring AOP
+- 🔜 Spring JDBC
+- 🔜 Spring MVC
+- 🔜 Spring Boot
+- 🔜 Spring Security
+- 🔜 Spring Data JPA
+- 🔜 REST APIs
+
+---
+
+# ⭐ Support
+
+If this repository helps you learn Spring,
+
+**consider giving it a ⭐ on GitHub!**
+
+It motivates me to continue building more high-quality Java and Spring learning projects.
