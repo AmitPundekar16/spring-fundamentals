@@ -4,9 +4,21 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-        <bean name="cmp" class="org.amit.Computer" autowire="byName">
+        <bean name="cmp" class="org.amit.Computer" autowire="byName" lazy-init="true" scope="prototype" init-method="init" destroy-method="shutdown">
              <property name="psr" ref="inte"/>
              <constructor-arg ref="rm1"/>
+            <property name="str">
+                <bean class="org.amit.storage.SSD"/>
+            </property>
+            <property name="brand" value="Lenovo"/>
+            <property name="ports">
+                <list>
+                    <value>RJ45</value>
+                    <value>VGA</value>
+                    <value>VIDEO</value>
+                    <value>PS2</value>
+                </list>
+            </property>
 
        </bean>
 
@@ -15,7 +27,6 @@
     <bean name="rm1" class="org.amit.ram.DDR3"/>
     <bean name="ddr" class="org.amit.ram.DDR4"/>
 
-    <bean name="str" class="org.amit.storage.SSD"/>
     <bean name="str1" class="org.amit.storage.SSD" />
 
     <bean name="inte" class="org.amit.processor.Intel"/>
