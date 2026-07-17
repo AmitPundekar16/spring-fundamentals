@@ -4,16 +4,21 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="cmp" class="org.amit.Computer">
-        <constructor-arg index="0" ref="ddr3"/>
-        <constructor-arg index="1" ref="ssd"/>
-        <property name="psr" ref="inte"/>
-    </bean>
+        <bean name="cmp" class="org.amit.Computer" autowire="byName">
+             <property name="psr" ref="inte"/>
+             <constructor-arg ref="rm1"/>
 
-    <bean name="ddr3" class="org.amit.ram.DDR3"/>
+       </bean>
 
-    <bean name="ssd" class="org.amit.storage.SSD"/>
+
+
+    <bean name="rm1" class="org.amit.ram.DDR3"/>
+    <bean name="ddr" class="org.amit.ram.DDR4"/>
+
+    <bean name="str" class="org.amit.storage.SSD"/>
+    <bean name="str1" class="org.amit.storage.SSD" />
 
     <bean name="inte" class="org.amit.processor.Intel"/>
+    <bean name="amd" class="org.amit.processor.Amd"/>
 
 </beans>

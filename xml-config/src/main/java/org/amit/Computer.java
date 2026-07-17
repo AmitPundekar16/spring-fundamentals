@@ -8,12 +8,16 @@ public class Computer {
     Ram rm;
     Storage str;
     Processor psr;
-
-    Computer(Ram rm,Storage str)
+    String brand="";
+    Computer(Ram rm)
     {
         this.rm=rm;
-        this.str=str;
-       // this.psr=psr;
+
+    }
+
+
+    public void setStr(Storage str) {
+        this.str = str;
     }
 
     public void setPsr(Processor psr) {
