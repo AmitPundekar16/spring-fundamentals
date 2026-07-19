@@ -8,7 +8,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
     public static void main(String[] args) {
        Restaurant res;
-
        ApplicationContext con=new AnnotationConfigApplicationContext(Appconfig.class);
        res=(Restaurant) con.getBean("restaurant");
        res.resturent();
