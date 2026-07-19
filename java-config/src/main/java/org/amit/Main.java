@@ -10,7 +10,7 @@ public class Main {
        Restaurant res;
 
        ApplicationContext con=new AnnotationConfigApplicationContext(Appconfig.class);
-       res=con.getBean(Restaurant.class);
+       res=(Restaurant) con.getBean("restaurant");
        res.resturent();
     }
 }
