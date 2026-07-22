@@ -1,5 +1,8 @@
-package billingservice;
+package com.example.annotation_config.billingservice;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class InsuranceBilling implements BillingService{
     public void getbillingtype()
     {

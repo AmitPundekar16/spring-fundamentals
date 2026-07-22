@@ -1,4 +1,8 @@
-package doctor;
+package com.example.annotation_config.doctor;
+
+import org.springframework.stereotype.Component;
+
+@Component
 
 public class Cardiologist implements Doctor {
 
