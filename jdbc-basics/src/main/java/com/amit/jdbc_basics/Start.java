@@ -1,0 +1,91 @@
+package com.amit.jdbc_basics;
+
+import com.amit.jdbc_basics.models.Employee;
+import com.amit.jdbc_basics.service.EmployeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Component;
+
+import java.util.Scanner;
+
+@Component
+public class Start {
+
+    Scanner sc = new Scanner(System.in);
+    ApplicationContext apk;
+    private int choice;
+    @Autowired
+    Employee emp;
+
+    @Autowired
+    EmployeService empser;
+    Boolean running=true;
+    public void start(ApplicationContext apk)
+    {
+        this.apk=apk;
+        while (true) {
+            System.out.println("\nSelect the option");
+            System.out.println("1. Add Data");
+            System.out.println("2. Fetch Data");
+            System.out.println("3. Select Data of Specific Employee");
+            System.out.println("4. Delete Specific Record");
+            System.out.println("5. Delete All Records");
+            System.out.println("6. Exit");
+
+            int choice = sc.nextInt();
+            sc.nextLine(); // clear buffer after nextInt()
+
+            switch (running) {
+                case 1:
+                    addStudent(sc);
+                    empser.saveEmployee(emp);
+                    break;
+                case 2:
+                    fetchStudents();
+                    break;
+                case 3:
+                    fetchSpecificStudent(sc);
+                    break;
+                case 4:
+                    deleteSpecificStudent(sc);
+                    break;
+                case 5:
+                    deleteAllStudents();
+                    break;
+                case 6:
+                    running = false;
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice, try again.");
+            }
+        }
+        sc.close();
+
+
+    }
+
+
+    void addStudent(Scanner sc)
+    {
+        System.out.println("Enter Employee id");
+        emp.setId(sc.nextInt());
+
+        System.out.println("Enter Employee Name");
+        emp.setName(sc.nextLine());
+
+        System.out.println("Enter Employee Department");
+        emp.setDepartment(sc.nextLine());
+
+        System.out.println("Enter Employee Salary");
+        emp.setSalary(sc.nextInt());
+
+        System.out.println("Enter Employee email");
+        emp.setEmail(sc.nextLine());
+
+    }
+
+
+}
+
+
