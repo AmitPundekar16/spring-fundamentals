@@ -46,7 +46,7 @@ public class Start {
                     System.out.println(em);
                     break;
                 case 3:
-                    //fetchSpecificStudent(sc);
+                    fetchSpecificStudent(sc);
                     break;
                 case 4:
                    // deleteSpecificStudent(sc);
@@ -64,6 +64,19 @@ public class Start {
         }
         sc.close();
 
+
+    }
+
+    private void fetchSpecificStudent(Scanner sc) {
+        System.out.println("Enter Employee id");
+        int id=sc.nextInt();
+
+       Employee em= empser.fetchSpecific(id);
+        if (em == null) {
+            System.out.println("No data");
+        } else {
+            System.out.println(em);
+        }
 
     }
 

@@ -45,4 +45,23 @@ public class EmployeeRepo {
         };
 
         return jd.query(sql, rw);    }
+
+    public Employee fetchSpecific(int id) {
+        String sql = "select * from Employee where id = ?";
+
+        RowMapper<Employee> rw = new RowMapper<Employee>() {
+            @Override
+            public Employee mapRow(ResultSet rs, int rowNum) throws SQLException {
+                Employee e = new Employee();
+                e.setId(rs.getInt("id"));
+                e.setName(rs.getString("name"));
+                e.setDepartment(rs.getString("department"));
+                e.setSalary(rs.getInt("salary"));
+                e.setEmail(rs.getString("email"));
+                return e;
+            }
+        };
+
+        return jd.queryForObject(sql, rw, id);
+    }
 }

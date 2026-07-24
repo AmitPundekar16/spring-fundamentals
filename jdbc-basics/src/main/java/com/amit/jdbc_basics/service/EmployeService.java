@@ -19,4 +19,8 @@ public class EmployeService {
     public List<Employee> fetchData() {
         return rep.fetchData();
     }
+
+    public Employee fetchSpecific(int id) {
+       return rep.fetchSpecific(id);
+    }
 }
