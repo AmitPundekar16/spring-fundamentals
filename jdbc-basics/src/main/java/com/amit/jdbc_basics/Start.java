@@ -23,7 +23,7 @@ public class Start {
     public void start(ApplicationContext apk)
     {
         this.apk=apk;
-        while (true) {
+        while (running) {
             System.out.println("\nSelect the option");
             System.out.println("1. Add Data");
             System.out.println("2. Fetch Data");
@@ -35,22 +35,22 @@ public class Start {
             int choice = sc.nextInt();
             sc.nextLine(); // clear buffer after nextInt()
 
-            switch (running) {
+            switch (choice) {
                 case 1:
                     addStudent(sc);
                     empser.saveEmployee(emp);
                     break;
                 case 2:
-                    fetchStudents();
+                    //fetchStudents();
                     break;
                 case 3:
-                    fetchSpecificStudent(sc);
+                    //fetchSpecificStudent(sc);
                     break;
                 case 4:
-                    deleteSpecificStudent(sc);
+                   // deleteSpecificStudent(sc);
                     break;
                 case 5:
-                    deleteAllStudents();
+                   // deleteAllStudents();
                     break;
                 case 6:
                     running = false;
@@ -70,15 +70,20 @@ public class Start {
     {
         System.out.println("Enter Employee id");
         emp.setId(sc.nextInt());
+        sc.nextLine();
 
         System.out.println("Enter Employee Name");
         emp.setName(sc.nextLine());
+        sc.nextLine();
 
         System.out.println("Enter Employee Department");
         emp.setDepartment(sc.nextLine());
+        sc.nextLine();
+
 
         System.out.println("Enter Employee Salary");
         emp.setSalary(sc.nextInt());
+        sc.nextLine();
 
         System.out.println("Enter Employee email");
         emp.setEmail(sc.nextLine());
