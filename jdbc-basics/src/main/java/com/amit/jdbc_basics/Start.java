@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Scanner;
 
 @Component
@@ -41,7 +42,8 @@ public class Start {
                     empser.saveEmployee(emp);
                     break;
                 case 2:
-                    //fetchStudents();
+                    List<Employee> em=empser.fetchData();
+                    System.out.println(em);
                     break;
                 case 3:
                     //fetchSpecificStudent(sc);

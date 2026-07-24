@@ -5,6 +5,8 @@ import com.amit.jdbc_basics.repository.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class EmployeService {
     @Autowired
@@ -12,5 +14,9 @@ public class EmployeService {
     public void saveEmployee(Employee s)
     {
         rep.saveEmployee(s);
+    }
+
+    public List<Employee> fetchData() {
+        return rep.fetchData();
     }
 }

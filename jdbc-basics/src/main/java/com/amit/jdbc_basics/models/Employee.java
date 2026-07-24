@@ -8,6 +8,18 @@ import org.springframework.stereotype.Component;
 public class Employee {
     private int id;
     private String name;
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", department='" + department + '\'' +
+                ", salary=" + salary +
+                ", email='" + email + '\'' +
+                '}';
+    }
+
     private String department;
     private int salary;
     private String email;
