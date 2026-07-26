@@ -52,7 +52,7 @@ public class Start {
                     deleteSpecificStudent(sc);
                     break;
                 case 5:
-                   // deleteAllStudents();
+                    deleteAllStudents();
                     break;
                 case 6:
                     running = false;
@@ -65,6 +65,9 @@ public class Start {
         sc.close();
 
 
+    }
+
+    private void deleteAllStudents() {
     }
 
     private void deleteSpecificStudent(Scanner sc) {
