@@ -71,4 +71,11 @@ public class EmployeeRepo {
         int c=jd.update(sql,id);
         System.out.println("record deleted succesfully"+c);
     }
+
+    public void deleteallemployee() {
+        String sql="delete from employee";
+
+        int c=jd.update(sql);
+        System.out.println("record deleted succesfully"+c);
+    }
 }

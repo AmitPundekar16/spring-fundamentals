@@ -29,6 +29,7 @@ public class EmployeService {
     }
 
     public void deleteallemployee() {
+        rep.deleteallemployee();
 
     }
 }
