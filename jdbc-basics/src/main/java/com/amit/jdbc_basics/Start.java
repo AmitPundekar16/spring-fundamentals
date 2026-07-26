@@ -46,13 +46,13 @@ public class Start {
                     System.out.println(em);
                     break;
                 case 3:
-                    fetchSpecificStudent(sc);
+                    fetchSpecificEmployee(sc);
                     break;
                 case 4:
-                    deleteSpecificStudent(sc);
+                    deleteSpecificEmployee(sc);
                     break;
                 case 5:
-                    deleteAllStudents();
+                    deleteAllEmployee();
                     break;
                 case 6:
                     running = false;
@@ -67,16 +67,17 @@ public class Start {
 
     }
 
-    private void deleteAllStudents() {
+    private void deleteAllEmployee() {
+        empser.deleteallemployee();
     }
 
-    private void deleteSpecificStudent(Scanner sc) {
+    private void deleteSpecificEmployee(Scanner sc) {
         System.out.println("Enter Employee id");
         int id=sc.nextInt();
         empser.deletespecificdata(id);
     }
 
-    private void fetchSpecificStudent(Scanner sc) {
+    private void fetchSpecificEmployee(Scanner sc) {
         System.out.println("Enter Employee id");
         int id=sc.nextInt();
 

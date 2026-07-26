@@ -27,4 +27,8 @@ public class EmployeService {
     public void deletespecificdata(int id) {
         rep.deletespecificrecord(id);
     }
+
+    public void deleteallemployee() {
+
+    }
 }
