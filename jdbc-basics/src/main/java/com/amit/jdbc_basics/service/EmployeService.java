@@ -23,4 +23,8 @@ public class EmployeService {
     public Employee fetchSpecific(int id) {
        return rep.fetchSpecific(id);
     }
+
+    public void deletespecificdata(int id) {
+        rep.deletespecificrecord(id);
+    }
 }

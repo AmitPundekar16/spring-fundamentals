@@ -49,7 +49,7 @@ public class Start {
                     fetchSpecificStudent(sc);
                     break;
                 case 4:
-                   // deleteSpecificStudent(sc);
+                    deleteSpecificStudent(sc);
                     break;
                 case 5:
                    // deleteAllStudents();
@@ -65,6 +65,12 @@ public class Start {
         sc.close();
 
 
+    }
+
+    private void deleteSpecificStudent(Scanner sc) {
+        System.out.println("Enter Employee id");
+        int id=sc.nextInt();
+        empser.deletespecificdata(id);
     }
 
     private void fetchSpecificStudent(Scanner sc) {

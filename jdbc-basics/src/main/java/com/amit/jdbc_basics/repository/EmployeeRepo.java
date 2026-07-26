@@ -64,4 +64,11 @@ public class EmployeeRepo {
 
         return jd.queryForObject(sql, rw, id);
     }
+
+    public void deletespecificrecord(int id) {
+        String sql="delete from employee where id=?";
+
+        int c=jd.update(sql,id);
+        System.out.println("record deleted succesfully"+c);
+    }
 }
