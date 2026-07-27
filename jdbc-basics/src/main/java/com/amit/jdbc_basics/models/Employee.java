@@ -14,13 +14,22 @@ public class Employee {
         return "Employee{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", department='" + department + '\'' +
+                ", department='" + dep_id + '\'' +
                 ", salary=" + salary +
                 ", email='" + email + '\'' +
                 '}';
     }
 
-    private String department;
+    private int dep_id;
+
+    public int getDep_id() {
+        return dep_id;
+    }
+
+    public void setDep_id(int dep_id) {
+        this.dep_id = dep_id;
+    }
+
     private int salary;
     private String email;
 
@@ -40,13 +49,7 @@ public class Employee {
         this.name = name;
     }
 
-    public String getDepartment() {
-        return department;
-    }
 
-    public void setDepartment(String department) {
-        this.department = department;
-    }
 
     public int getSalary() {
         return salary;

@@ -102,8 +102,7 @@ public class Start {
         sc.nextLine();
 
         System.out.println("Enter Employee Department");
-        emp.setDepartment(sc.nextLine());
-        sc.nextLine();
+        emp.setDep_id(sc.nextInt());
 
 
         System.out.println("Enter Employee Salary");

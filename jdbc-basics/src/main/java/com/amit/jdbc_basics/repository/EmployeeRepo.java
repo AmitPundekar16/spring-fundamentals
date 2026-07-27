@@ -23,8 +23,8 @@ public class EmployeeRepo {
     }
     public void saveEmployee(Employee emp)
     {
-        String sql="insert into Employee(id,name,department,salary,email)values(?,?,?,?,?)";
-        int aff=jd.update(sql,emp.getId(),emp.getName(),emp.getDepartment(),emp.getSalary(),emp.getEmail());
+        String sql="insert into Employee(id,name,department_id,salary,email)values(?,?,?,?,?)";
+        int aff=jd.update(sql,emp.getId(),emp.getName(),emp.getDep_id(),emp.getSalary(),emp.getEmail());
         System.out.println("Data stored successfullly: "+aff);
     }
 
@@ -36,7 +36,7 @@ public class EmployeeRepo {
                 Employee e = new Employee();
                 e.setId(rs.getInt("id"));
                 e.setName(rs.getString("name"));
-                e.setDepartment(rs.getString("department"));
+                e.setDep_id(rs.getInt("department_id"));
                 e.setSalary(rs.getInt("salary"));
                 e.setEmail(rs.getString("email"));
                 return e;
@@ -54,7 +54,7 @@ public class EmployeeRepo {
                 Employee e = new Employee();
                 e.setId(rs.getInt("id"));
                 e.setName(rs.getString("name"));
-                e.setDepartment(rs.getString("department"));
+                e.setDep_id(rs.getInt("department_id"));
                 e.setSalary(rs.getInt("salary"));
                 e.setEmail(rs.getString("email"));
                 return e;
