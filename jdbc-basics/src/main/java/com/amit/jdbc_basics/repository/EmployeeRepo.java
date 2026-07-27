@@ -21,6 +21,7 @@ public class EmployeeRepo {
     public void setJd(JdbcTemplate jd) {
         this.jd = jd;
     }
+
     public void saveEmployee(Employee emp)
     {
         String sql="insert into Employee(id,name,department_id,salary,email)values(?,?,?,?,?)";
