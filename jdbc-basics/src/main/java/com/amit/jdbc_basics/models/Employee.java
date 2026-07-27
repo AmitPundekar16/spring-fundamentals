@@ -5,20 +5,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope("prototype")
-public class Employee {
+public class Employee extends department{
     private int id;
     private String name;
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", department='" + dep_id + '\'' +
-                ", salary=" + salary +
-                ", email='" + email + '\'' +
-                '}';
-    }
+
 
     private int dep_id;
 
@@ -50,7 +41,18 @@ public class Employee {
     }
 
 
-
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", salary=" + salary +
+                ", email='" + email + '\'' +
+                ", dep_id=" + getDep_id() +
+                ", dep_name='" + getDep_name() + '\'' +
+                ", dep_budget=" + getDep_budget() +
+                '}';
+    }
     public int getSalary() {
         return salary;
     }

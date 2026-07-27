@@ -16,11 +16,13 @@ public class EmployeeRepo {
 
     JdbcTemplate jd;
 
-
+    @Autowired
+    Employee e ;
     @Autowired
     public void setJd(JdbcTemplate jd) {
         this.jd = jd;
     }
+
 
     public void saveEmployee(Employee emp)
     {
@@ -52,7 +54,7 @@ public class EmployeeRepo {
         RowMapper<Employee> rw = new RowMapper<Employee>() {
             @Override
             public Employee mapRow(ResultSet rs, int rowNum) throws SQLException {
-                Employee e = new Employee();
+
                 e.setId(rs.getInt("id"));
                 e.setName(rs.getString("name"));
                 e.setDep_id(rs.getInt("department_id"));

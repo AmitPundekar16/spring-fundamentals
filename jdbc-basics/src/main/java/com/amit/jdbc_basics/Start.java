@@ -46,7 +46,7 @@ public class Start {
                     System.out.println(em);
                     break;
                 case 3:
-                    fetchSpecificEmployee(sc);
+                    fetchSpecificEmployee(sc,apk);
                     break;
                 case 4:
                     deleteSpecificEmployee(sc);
@@ -77,11 +77,11 @@ public class Start {
         empser.deletespecificdata(id);
     }
 
-    private void fetchSpecificEmployee(Scanner sc) {
+    private void fetchSpecificEmployee(Scanner sc,ApplicationContext apk) {
         System.out.println("Enter Employee id");
         int id=sc.nextInt();
 
-       Employee em= empser.fetchSpecific(id);
+       Employee em= empser.fetchSpecific(id,apk);
         if (em == null) {
             System.out.println("No data");
         } else {
