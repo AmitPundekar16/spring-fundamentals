@@ -26,7 +26,6 @@ public class EmployeeRepo {
         String sql="insert into Employee(id,name,department,salary,email)values(?,?,?,?,?)";
         int aff=jd.update(sql,emp.getId(),emp.getName(),emp.getDepartment(),emp.getSalary(),emp.getEmail());
         System.out.println("Data stored successfullly: "+aff);
-
     }
 
     public List<Employee> fetchData() {
