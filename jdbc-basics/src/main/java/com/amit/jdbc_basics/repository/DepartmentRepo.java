@@ -18,12 +18,13 @@ public class DepartmentRepo {
     @Autowired
     JdbcTemplate jd;
     ApplicationContext apk;
-
+    @Autowired
+    Employee e;
     public Employee getdepartment(int depId, ApplicationContext apk) {
         this.apk=apk;
         //jd=(JdbcTemplate)apk.getBean("setJd");
         String sql="select * from Department where dep_id=?";
-        Employee e;
+
         RowMapper<Employee> rw=new RowMapper() {
             @Override
             public Employee mapRow(ResultSet rs, int rowNum) throws SQLException {
