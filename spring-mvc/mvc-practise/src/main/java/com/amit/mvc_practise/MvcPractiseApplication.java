@@ -8,6 +8,7 @@ public class MvcPractiseApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MvcPractiseApplication.class, args);
+		System.out.println("hello");
 	}
 
 }
