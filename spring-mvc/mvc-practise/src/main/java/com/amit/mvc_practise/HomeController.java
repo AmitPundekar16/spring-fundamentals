@@ -15,13 +15,11 @@ public class HomeController {
     }
 
     @RequestMapping("add")
-    public String add(HttpServletRequest req, HttpSession ses)
+    public String add(int num1,int num2, HttpSession ses)
     {
-        int n1 = Integer.parseInt(req.getParameter("num1"));
-        int n2 = Integer.parseInt(req.getParameter("num2"));
-        int res=n1+n2;
 
+        int res=num1+num2;
         ses.setAttribute("res",res);
-       return "output.jsp";
+        return "output.jsp";
     }
 }
