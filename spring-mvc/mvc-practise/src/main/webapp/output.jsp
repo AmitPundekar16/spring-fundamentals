@@ -2,6 +2,6 @@
 
 <html>
   <body>
-       <h1>Result is :<%=session.getAttribute("res")%></h1>
+       <h1>Result is :${res}</h1>
    </body>
  </html>

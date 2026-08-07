@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
@@ -17,12 +18,13 @@ public class HomeController {
     }
 
     @RequestMapping("add")
-    public String add(@RequestParam("num1")int n1, @RequestParam("num2") int n2, Model m)
+    public ModelAndView add(@RequestParam("num1")int n1, @RequestParam("num2") int n2, ModelAndView m)
     {
         // Model m;
 
         int res=n1+n2;
-        m.addAttribute("res",res);
-        return "output.jsp";
+        m.addObject("res",res);
+        m.setViewName("output.jsp");
+        return m;
     }
 }
