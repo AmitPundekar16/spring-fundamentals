@@ -3,6 +3,7 @@ package com.amit.mvc_practise;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,11 +17,12 @@ public class HomeController {
     }
 
     @RequestMapping("add")
-    public String add(@RequestParam("num1")int n1, @RequestParam("num2") int n2, HttpSession ses)
+    public String add(@RequestParam("num1")int n1, @RequestParam("num2") int n2, Model m)
     {
+        // Model m;
 
         int res=n1+n2;
-        ses.setAttribute("res",res);
+        m.addAttribute("res",res);
         return "output.jsp";
     }
 }
