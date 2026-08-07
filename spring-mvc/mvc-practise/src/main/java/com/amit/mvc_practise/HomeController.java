@@ -5,6 +5,7 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomeController {
@@ -15,10 +16,10 @@ public class HomeController {
     }
 
     @RequestMapping("add")
-    public String add(int num1,int num2, HttpSession ses)
+    public String add(@RequestParam("num1")int n1, @RequestParam("num2") int n2, HttpSession ses)
     {
 
-        int res=num1+num2;
+        int res=n1+n2;
         ses.setAttribute("res",res);
         return "output.jsp";
     }
