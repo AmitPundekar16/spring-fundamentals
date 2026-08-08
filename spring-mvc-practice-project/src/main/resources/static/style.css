@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #2c3e50;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+}
+
+header h2 {
+    color: white;
+    margin-right: 40px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    text-align: center;
+}
+
+.center-content h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.add-job-btn {
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.add-job-btn:hover {
+    background-color: #1a252f;
+}
