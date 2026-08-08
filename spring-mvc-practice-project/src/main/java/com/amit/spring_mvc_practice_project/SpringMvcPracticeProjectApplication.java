@@ -7,9 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringMvcPracticeProjectApplication {
 
 	public static void main(String[] args) {
-
 		SpringApplication.run(SpringMvcPracticeProjectApplication.class, args);
-
 		System.out.println("hello");
 	}
 
