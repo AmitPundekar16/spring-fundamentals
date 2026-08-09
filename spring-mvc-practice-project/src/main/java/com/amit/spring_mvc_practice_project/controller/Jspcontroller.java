@@ -26,7 +26,7 @@ public class Jspcontroller {
 
     @RequestMapping("/addJob")
     public String Addjob()
-    {System.out.println("hello H1");
+    {System.out.println("hello H11");
         return "AddJob.jsp";
     }
 
