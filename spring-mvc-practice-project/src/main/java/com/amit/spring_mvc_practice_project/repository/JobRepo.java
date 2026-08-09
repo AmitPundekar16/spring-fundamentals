@@ -21,4 +21,9 @@ public class JobRepo {
         System.out.println("hey iam repo add");
         return j1.add(a);
     }
+
+    public List<AddJob> getalljobs() {
+        System.out.println("hey iam repo getdetails");
+        return j1;
+    }
 }

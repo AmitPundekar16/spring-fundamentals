@@ -5,9 +5,12 @@ import com.amit.spring_mvc_practice_project.model.AddJob;
 import com.amit.spring_mvc_practice_project.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.View;
 
 @Controller
 public class Jspcontroller {
@@ -37,5 +40,15 @@ public class Jspcontroller {
             return "Success.jsp";
         }
         return "/";
+    }
+
+    @RequestMapping("/viewjob")
+    public ModelAndView Viewjob(ModelAndView m)
+    {
+
+        m.addObject("jobs",jobService.getalljobs());
+        m.setViewName("ViewJob.jsp");
+
+        return m;
     }
 }

@@ -11,7 +11,7 @@
         <h2>Job Board</h2>
         <nav>
             <a href="/home">Home</a>
-            <a href="/jobsview">View Jobs</a>
+            <a href="/viewjob">View Jobs</a>
         </nav>
     </header>
 
