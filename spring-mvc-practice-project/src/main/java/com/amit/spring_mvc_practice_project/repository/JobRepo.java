@@ -17,7 +17,8 @@ public class JobRepo {
             new AddJob("QA Engineer", "Cognizant", "Chennai", 400000, 1, "Manual and automation testing"),
             new AddJob("Full Stack Developer", "Capgemini", "Pune", 550000, 2, "End-to-end web application development")            )
     );
-    public int addjob(AddJob a) {
-        return 1;
+    public boolean addjob(AddJob a) {
+        System.out.println("hey iam repo add");
+        return j1.add(a);
     }
 }

@@ -31,8 +31,8 @@ public class Jspcontroller {
     public String Addjob(AddJob a)
     {
         System.out.println("hello H2");
-        int i=jobService.addjob(a);
-        if(i!=0) {
+        boolean i=jobService.addjob(a);
+        if(i) {
             System.out.println(a.getCompany());
             return "Success.jsp";
         }

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 public class JobService {
    @Autowired
     JobRepo jobrepo;
-    public int addjob(AddJob a) {
+    public boolean addjob(AddJob a) {
         return jobrepo.addjob(a);
     }
 }
