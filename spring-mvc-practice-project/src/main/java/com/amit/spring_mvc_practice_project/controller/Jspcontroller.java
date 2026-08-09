@@ -17,22 +17,24 @@ public class Jspcontroller {
     @GetMapping({"/","/home"})
     public String home()
     {
-        System.out.println("hello");
+        System.out.println("hello Home");
         return "home.jsp";
     }
 
     @RequestMapping("/addJob")
     public String Addjob()
-    {
+    {System.out.println("hello H1");
         return "AddJob.jsp";
     }
 
-    @PostMapping("/addjob")
+    @PostMapping("/addJob")
     public String Addjob(AddJob a)
     {
+        System.out.println("hello H2");
         int i=jobService.addjob(a);
         if(i!=0) {
-            return "success.jsp";
+            System.out.println(a.getCompany());
+            return "Success.jsp";
         }
         return "/";
     }
