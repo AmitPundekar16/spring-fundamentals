@@ -12,8 +12,14 @@ public class JobService {
 
     @Autowired
     private JobRepo jobRepo;
+
     public List<Jobs> getAllJobs() {
         System.out.println("hello i am getall service");
         return jobRepo.getAllJobs();
+    }
+
+
+    public Jobs getJobById(int id) {
+        return jobRepo.getJobById(id);
     }
 }

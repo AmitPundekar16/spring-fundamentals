@@ -22,4 +22,15 @@ public class JobRepo {
         System.out.println("hello i am getall repo");
         return j1;
     }
+
+    public Jobs getJobById(int id) {
+        for(Jobs j:j1)
+        {
+            if(j.getJobid()==id)
+            {
+                return j;
+            }
+        }
+        return null;
+    }
 }
