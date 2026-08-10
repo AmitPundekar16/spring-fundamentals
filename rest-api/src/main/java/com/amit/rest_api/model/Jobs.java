@@ -1,17 +1,29 @@
 package com.amit.rest_api.model;
 
+import org.springframework.stereotype.Component;
+
 public class Jobs {
 
-
+    private int jobid;
     private String jobtitle;
     private String companyname;
+
+    public int getJobid() {
+        return jobid;
+    }
+
+    public void setJobid(int jobid) {
+        this.jobid = jobid;
+    }
+
     private String location;
     private int salary;
     private int experience;
     private String description;
 
 
-    public Jobs(String jobtitle, String companyname, String location, int salary, int experience, String description) {
+    public Jobs(int jobid,String jobtitle, String companyname, String location, int salary, int experience, String description) {
+        this.jobid=jobid;
         this.jobtitle = jobtitle;
         this.companyname = companyname;
         this.location = location;

@@ -15,7 +15,7 @@ public class JobController {
     private JobService jobService;
     @GetMapping("/jobposts")
     public List<Jobs> getAllJobs()
-    {
+    { System.out.println("hello i am getall controller");
         return jobService.getAllJobs();
     }
 }

@@ -13,6 +13,7 @@ public class JobService {
     @Autowired
     private JobRepo jobRepo;
     public List<Jobs> getAllJobs() {
-        return JobRepo.getAllJobs();
+        System.out.println("hello i am getall service");
+        return jobRepo.getAllJobs();
     }
 }
