@@ -33,4 +33,9 @@ public class JobService {
         System.out.println("hello i am deletejob from service");
         return jobRepo.deleteJob(id);
     }
+
+    public boolean deleteAllJobs() {
+        System.out.println("hello i am deleteAlljobs from service");
+        return jobRepo.deleteAllJobs();
+    }
 }

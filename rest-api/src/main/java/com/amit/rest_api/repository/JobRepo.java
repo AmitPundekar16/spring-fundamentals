@@ -52,4 +52,16 @@ public class JobRepo {
         }
         return false;
     }
+
+    public boolean deleteAllJobs() {
+        System.out.println("Hello i am in deleteAllJobs repo");
+        if(!j1.isEmpty()) {
+            j1.clear();
+            return true;
+        }
+        else {
+
+            return false;
+        }
+    }
 }
