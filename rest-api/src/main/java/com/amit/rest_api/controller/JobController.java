@@ -30,6 +30,20 @@ public class JobController {
     {
         System.out.println("hello i am add job controller");
         return jobService.addJob(j);
+    }
 
+    @DeleteMapping("/jobpost")
+    public String deleteJob(int id)
+    {
+        System.out.println("hello i am deletejob controller");
+      boolean status= jobService.deleteJob(id);
+
+      if(status)
+      {
+         return "job deleted Successfully";
+      }
+      else {
+          return "error occured";
+      }
     }
 }
