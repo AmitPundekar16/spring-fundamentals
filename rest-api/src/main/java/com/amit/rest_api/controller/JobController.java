@@ -3,10 +3,7 @@ package com.amit.rest_api.controller;
 import com.amit.rest_api.model.Jobs;
 import com.amit.rest_api.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,7 +25,8 @@ public class JobController {
        return jobService.getJobById(id);
     }
 
-    public Jobs addJob(Jobs j)
+    @PostMapping("/jobpost")
+    public Jobs addJob(@RequestBody Jobs j)
     {
         System.out.println("hello i am add job controller");
         return jobService.addJob(j);

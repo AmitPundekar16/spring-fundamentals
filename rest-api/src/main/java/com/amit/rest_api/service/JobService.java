@@ -22,4 +22,10 @@ public class JobService {
     public Jobs getJobById(int id) {
         return jobRepo.getJobById(id);
     }
+
+    public Jobs addJob(Jobs j) {
+        System.out.println("hello i am add job from service");
+        return jobRepo.addJob(j);
+
+    }
 }

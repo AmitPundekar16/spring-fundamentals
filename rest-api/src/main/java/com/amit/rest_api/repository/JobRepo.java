@@ -33,4 +33,10 @@ public class JobRepo {
         }
         return null;
     }
+
+    public Jobs addJob(Jobs j) {
+        System.out.println("hello i am addjob from repo");
+        j1.add(j);
+        return j;
+    }
 }
