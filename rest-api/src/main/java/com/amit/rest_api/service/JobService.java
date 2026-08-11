@@ -28,4 +28,9 @@ public class JobService {
         return jobRepo.addJob(j);
 
     }
+
+    public boolean deleteJob(int id) {
+        System.out.println("hello i am deletejob from service");
+        return jobRepo.deleteJob(id);
+    }
 }

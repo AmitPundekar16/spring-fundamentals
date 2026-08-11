@@ -32,8 +32,8 @@ public class JobController {
         return jobService.addJob(j);
     }
 
-    @DeleteMapping("/jobpost")
-    public String deleteJob(int id)
+    @DeleteMapping("/jobpost/{id}")
+    public String deleteJob(@PathVariable int id)
     {
         System.out.println("hello i am deletejob controller");
       boolean status= jobService.deleteJob(id);

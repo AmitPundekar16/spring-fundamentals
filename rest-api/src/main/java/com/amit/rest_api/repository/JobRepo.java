@@ -39,4 +39,17 @@ public class JobRepo {
         j1.add(j);
         return j;
     }
+
+    public boolean deleteJob(int id) {
+        System.out.println("hello i am deletejob from repo");
+        for(Jobs j:j1)
+        {
+            if(j.getJobid()==id)
+            {
+                return j1.remove(j);
+            }
+
+        }
+        return false;
+    }
 }
