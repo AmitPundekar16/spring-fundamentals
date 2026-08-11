@@ -46,4 +46,20 @@ public class JobController {
           return "error occured";
       }
     }
+
+    @DeleteMapping("/jobposts")
+    public String deleteAllJobs()
+    {
+       System.out.println("hello i am  in delete all jobs controller");
+
+        boolean status= jobService.deleteAllJobs();
+
+        if(status)
+        {
+            return "jobs deleted Successfully";
+        }
+        else {
+            return "error occured";
+        }
+    }
 }
