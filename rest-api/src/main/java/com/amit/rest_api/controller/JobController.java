@@ -27,4 +27,11 @@ public class JobController {
     {
        return jobService.getJobById(id);
     }
+
+    public Jobs addJob(Jobs j)
+    {
+        System.out.println("hello i am add job controller");
+        return jobService.addJob(j);
+
+    }
 }
