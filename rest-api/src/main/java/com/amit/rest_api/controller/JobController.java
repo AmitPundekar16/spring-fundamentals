@@ -62,4 +62,11 @@ public class JobController {
             return "error occured";
         }
     }
+
+    @PutMapping("/jobpost/{id}")
+    public String updateJob(@PathVariable("id") int id)
+    {
+        return jobService.updateJob(id);
+    }
+
 }
