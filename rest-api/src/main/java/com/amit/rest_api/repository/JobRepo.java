@@ -64,4 +64,25 @@ public class JobRepo {
             return false;
         }
     }
+
+    public String updateJob(int id, Jobs j11) {
+        System.out.println("hello i a, in repo layer");
+        for(Jobs j:j1)
+        {
+            if(j.getJobid()==id)
+            {
+              j.setJobtitle(j11.getJobtitle());
+              j.setCompanyname(j11.getCompanyname());
+
+              return "success";
+            }
+
+        }
+
+//        for(int i=0;i<j1.size();i++)
+//        {
+//            if(j1.)
+//        }
+        return "unsuccessfull";
+    }
 }
