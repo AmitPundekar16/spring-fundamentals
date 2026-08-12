@@ -4,7 +4,6 @@ import com.amit.rest_api.model.Jobs;
 import com.amit.rest_api.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -15,7 +14,7 @@ public class JobController {
 
     @GetMapping("/jobposts")
     public List<Jobs> getAllJobs()
-    { System.out.println("hello i am getall controller");
+    { System.out.println("hello i am get_all controller");
         return jobService.getAllJobs();
     }
 
