@@ -79,10 +79,6 @@ public class JobRepo {
 
         }
 
-//        for(int i=0;i<j1.size();i++)
-//        {
-//            if(j1.)
-//        }
         return "unsuccessfull";
     }
 }
