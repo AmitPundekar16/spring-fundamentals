@@ -64,9 +64,9 @@ public class JobController {
     }
 
     @PutMapping("/jobpost/{id}")
-    public String updateJob(@PathVariable("id") int id)
+    public String updateJob(@PathVariable("id") int id,@RequestBody Jobs j)
     {
-        return jobService.updateJob(id);
+        return jobService.updateJob(id,j);
     }
 
 }

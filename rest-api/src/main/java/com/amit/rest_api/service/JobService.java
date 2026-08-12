@@ -38,4 +38,8 @@ public class JobService {
         System.out.println("hello i am deleteAlljobs from service");
         return jobRepo.deleteAllJobs();
     }
+
+    public String updateJob(int id, Jobs j) {
+        return jobRepo.updateJob(id,j);
+    }
 }
