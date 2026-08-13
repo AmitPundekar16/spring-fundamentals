@@ -44,5 +44,6 @@ public class JobService {
     }
 
     public String updateJob1(int id, Jobs j) {
+        return jobRepo.updateJob1(id,j);
     }
 }

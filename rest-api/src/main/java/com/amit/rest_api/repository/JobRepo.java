@@ -81,4 +81,8 @@ public class JobRepo {
 
         return "unsuccessfull";
     }
+
+    public String updateJob1(int id, Jobs j) {
+
+    }
 }
