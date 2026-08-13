@@ -68,4 +68,10 @@ public class JobController {
         return jobService.updateJob(id,j);
     }
 
+    @PatchMapping("/jobpost/{id}")
+    public String updateJob1(@PathVariable("id") int id,@RequestBody Jobs j)
+    {
+
+        return jobService.updateJob(id,j);
+    }
 }
