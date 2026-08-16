@@ -12,9 +12,5 @@ import org.springframework.stereotype.Component;
 public class Appconfig {
 
 
-    @Bean
-    public Veg getveg()
-    {
-        return new Veg();
-    }
+
 }
