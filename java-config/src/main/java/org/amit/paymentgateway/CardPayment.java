@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class CardPayment implements PaymentGateway{
     public void getypeofpayment()
     {
-        System.out.println("CardPayment is Available");
+        System.out.println("CardPayment is available");
     }
 }

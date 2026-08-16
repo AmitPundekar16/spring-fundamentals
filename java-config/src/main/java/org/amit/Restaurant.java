@@ -35,8 +35,9 @@ public class Restaurant {
         this.pay = pay;
     }
 
+
     public void resturent()
-    {
+    {System.out.println();
         System.out.println("This is An "+nm);
         kit.gettypeofkitchen();
         del.gettypeofdelivery();
