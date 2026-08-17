@@ -65,6 +65,7 @@ public class JobController {
     @PutMapping("/jobpost/{id}")
     public String updateJob(@PathVariable("id") int id,@RequestBody Jobs j)
     {
+        System.out.println("hello i am in updatejob");
         return jobService.updateJob(id,j);
     }
 
