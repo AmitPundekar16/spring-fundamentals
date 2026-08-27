@@ -22,4 +22,8 @@ public class StudentService {
     public Student searchStudent(int id) {
         return sd.searchStudentByid(id);
     }
+
+    public Student searchByName(String name) {
+        return sd.searchStudentByName(name);
+    }
 }

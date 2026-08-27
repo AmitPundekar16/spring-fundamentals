@@ -46,4 +46,11 @@ public class StudentController {
     {
         return studentService.searchStudent(id);
     }
+
+    @GetMapping("/searchn/{name}")
+    public Student searchByName(@PathVariable String name)
+    {
+        return studentService.searchByName(name);
+    }
+
 }

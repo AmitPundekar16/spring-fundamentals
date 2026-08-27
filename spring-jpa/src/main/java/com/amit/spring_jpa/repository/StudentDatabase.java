@@ -25,4 +25,8 @@ public class StudentDatabase {
     public Student searchStudentByid(int id) {
         return sp.getReferenceById(id);
     }
+
+    public Student searchStudentByName(String name) {
+        return sp.findByName(name);
+    }
 }
