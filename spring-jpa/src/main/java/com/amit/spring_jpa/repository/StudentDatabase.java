@@ -21,4 +21,8 @@ public class StudentDatabase {
         System.out.println(student);
         sp.saveAll(student);
     }
+
+    public Student searchStudentByid(int id) {
+        return sp.getReferenceById(id);
+    }
 }

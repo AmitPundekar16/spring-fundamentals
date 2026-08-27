@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -40,9 +41,9 @@ public class StudentController {
       studentService.addAllStudent(student);
     }
 
-    @GetMapping("/search")
-    public Student searchById(@RequestBody int id)
+    @GetMapping("/search/{id}")
+    public Student searchById(@PathVariable int id)
     {
-
+        return studentService.searchStudent(id);
     }
 }

@@ -18,4 +18,8 @@ public class StudentService {
     public void addAllStudent(List<Student> student) {
         sd.addAllStudent(student);
     }
+
+    public Student searchStudent(int id) {
+        return sd.searchStudentByid(id);
+    }
 }
