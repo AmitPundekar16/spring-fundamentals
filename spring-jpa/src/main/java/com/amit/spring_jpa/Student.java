@@ -1,12 +1,16 @@
 package com.amit.spring_jpa;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
 @Entity
+@Scope("prototype")
 public class Student {
-    @id
+
+    @Id
     private int id;
     private String name;
     private int marks;
@@ -43,4 +47,10 @@ public class Student {
     public void setMarks(int marks) {
         this.marks = marks;
     }
+
+    public void display()
+    {
+        System.out.println("hey how are u");
+    }
+
 }
