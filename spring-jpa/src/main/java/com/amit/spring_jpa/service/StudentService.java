@@ -26,4 +26,8 @@ public class StudentService {
     public Student searchByName(String name) {
         return sd.searchStudentByName(name);
     }
+
+    public void deleteByMarks(int marks) {
+        sd.deleteByMarks(marks);
+    }
 }

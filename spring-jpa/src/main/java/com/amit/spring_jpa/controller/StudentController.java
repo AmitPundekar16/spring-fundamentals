@@ -53,9 +53,10 @@ public class StudentController {
         return studentService.searchByName(name);
     }
 
+    @GetMapping("/delete/{marks}")
     public void deleteByMarks(@PathVariable int marks)
     {
-        return studentService.deleteByMarks(marks);
+         studentService.deleteByMarks(marks);
     }
 
 }

@@ -1,6 +1,7 @@
 package com.amit.spring_jpa.repository;
 
 import com.amit.spring_jpa.Student;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -28,5 +29,11 @@ public class StudentDatabase {
 
     public Student searchStudentByName(String name) {
         return sp.findByName(name);
+    }
+
+    @Transactional
+    public void deleteByMarks(int marks){
+        sp.deleteByMarks(marks);
+        System.out.println("record deleted successfully");
     }
 }
